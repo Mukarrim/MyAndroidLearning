@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivUserIcon"
+        android:layout_width="120dp"
+        android:contentDescription="@string/user_icon"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/face" />
+
+    <!-- An invisible view aligned to the center of the parent. Allows other
+    views to be arranged on either side -->
+    <View
+        android:id="@+id/centerShim"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+
+    <EditText
+        android:id="@+id/tvFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivUserIcon"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@+id/centerShim"
+        android:hint="@string/enter_first_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/tvLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivUserIcon"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/centerShim"
+        android:hint="@string/enter_last_name"
+        android:inputType="text" />
+
+
+    <EditText
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFirstName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@+id/centerShim"
+        android:hint="@string/enter_email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/tvAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLastName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/centerShim"
+        android:hint="@string/enter_age"
+        android:inputType="number" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAge"
+        android:layout_marginTop="24dp"
+        android:text="@string/submit"
+        android:textSize="18sp" />
+</RelativeLayout>
